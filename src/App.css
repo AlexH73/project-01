@@ -4,6 +4,12 @@
   flex-direction: column;
 }
 
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .app-header {
   background-color: var(--bg-secondary);
   box-shadow: var(--shadow);
@@ -25,8 +31,15 @@
 }
 
 /* Стили для логотипа */
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
 .logo {
-  height: 4rem;
+  height: 3rem;
+  width: auto;
   transition: transform 0.3s ease;
 }
 
@@ -67,7 +80,7 @@
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;

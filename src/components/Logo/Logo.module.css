@@ -1,0 +1,40 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.sublabel {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .text {
+    display: none;
+  }
+  
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}

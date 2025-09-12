@@ -1,4 +1,6 @@
 import "./App.css";
+import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
+import Logo from "./components/Logo/Logo";
 import Greeting from "./components/Greeting/Greeting";
 import Goodbye from "./components/Goodbye/Goodbye";
 import AgeInfo from "./components/AgeInfo/AgeInfo";
@@ -13,8 +15,10 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="container">
-          <h1>Мой Учебный React Проект</h1>
-          <p>Изучаем React и Vite вместе!</p>
+          <div className="headerContent">
+            <Logo />
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 

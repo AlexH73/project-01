@@ -3,7 +3,7 @@
   padding: var(--space-6);
   text-align: center;
   border: 2px solid var(--primary);
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  background: linear-gradient(135deg, #e0f7fabf 0%, #b3e5fc7d 100%);
 }
 
 .greeting {
