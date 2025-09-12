@@ -6,6 +6,7 @@ import DogCard from "./components/DogCard/DogCard";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 import Counter from "./components/Counter/Counter";
 import PersonalGreeting from "./components/PersonalGreeting/PersonalGreeting";
+import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
             <div className="components-grid">
               <PersonalGreeting />
               <Counter />
+              <SpaceMissionForm />
             </div>
           </section>
         </div>
