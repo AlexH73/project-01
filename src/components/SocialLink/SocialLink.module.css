@@ -1,0 +1,20 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--border-radius);
+}
+
+.link:hover {
+  color: var(--primary);
+  background-color: var(--bg-tertiary);
+}
+
+.link svg {
+  width: 20px;
+  height: 20px;
+}
