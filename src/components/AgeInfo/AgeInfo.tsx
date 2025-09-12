@@ -1,3 +1,5 @@
+import styles from "./AgeInfo.module.css";
+
 interface Props {
   age: number;
   name: string;
@@ -5,8 +7,12 @@ interface Props {
 
 function AgeInfo({ age, name }: Props) {
   return (
-    <div>
-      <p>I'm {age} years old, my name is {name}</p>
+    <div className={styles.card}>
+      <div className={styles.icon}>👤</div>
+      <p className={styles.text}>
+        My name is <span className={styles.highlight}>{name}</span> and I'm{" "}
+        <span className={styles.highlight}>{age}</span> years old
+      </p>
     </div>
   );
 }

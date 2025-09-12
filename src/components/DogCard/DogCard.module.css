@@ -1,0 +1,24 @@
+.card {
+  composes: card from global;
+  text-align: center;
+  padding: var(--space-5);
+  background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+  border: 2px solid #81d4fa;
+}
+
+.dogIcon {
+  font-size: 3rem;
+  margin-bottom: var(--space-3);
+}
+
+.text {
+  font-size: var(--text-lg);
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.dogName {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+}

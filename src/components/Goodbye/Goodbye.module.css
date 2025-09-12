@@ -1,0 +1,30 @@
+.card {
+  composes: card from global;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+  border: 2px solid #ce93d8;
+}
+
+.wave {
+  font-size: 2rem;
+  animation: wave 2s infinite;
+}
+
+.text {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+
+.name {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  75% { transform: rotate(-10deg); }
+}

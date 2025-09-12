@@ -1,3 +1,5 @@
+import s from "./ProfileCard.module.css";
+
 interface Props {
   avatar: string;
   name: string;
@@ -7,10 +9,12 @@ interface Props {
 function ProfileCard(props: Props) {
   const { avatar, name, description } = props;
   return (
-    <div className="profile-card">
-      <img src={avatar} alt={`${name} avatar`} />
-      <h2>{name}</h2>
-      <p>{description}</p>
+    <div className={s.profileCard}>
+      <img className={s.avatar} src={avatar} alt={`Avatar of ${name}`} />
+      <div className={s.content}>
+        <h2 className={s.name}>{name}</h2>
+        <p className={s.description}>{description}</p>
+      </div>
     </div>
   );
 }

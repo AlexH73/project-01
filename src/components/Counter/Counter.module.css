@@ -1,0 +1,35 @@
+.counter {
+  composes: card from global;
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.value {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 var(--space-5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.button {
+  composes: btn from global;
+  composes: btn-primary from global;
+  padding: var(--space-3) var(--space-4);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+}
