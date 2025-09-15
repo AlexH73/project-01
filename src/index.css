@@ -139,6 +139,11 @@ a:hover {
   color: var(--primary-hover);
 }
 
+/* Списки */
+ul, ol {
+  margin-left: var(--space-12);
+}
+
 /* Кнопки */
 button {
   font-family: inherit;

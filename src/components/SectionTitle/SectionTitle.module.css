@@ -1,0 +1,18 @@
+.sectionTitle {
+  composes: section-title from global;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  align-items: center;
+}
+
+
+h2 a {
+   width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  max-width: 180px;
+  justify-content: center;
+  display: flex;
+}

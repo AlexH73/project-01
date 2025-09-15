@@ -9,6 +9,7 @@ import ProfileCard from "./components/ProfileCard/ProfileCard";
 import Counter from "./components/Counter/Counter";
 import PersonalGreeting from "./components/PersonalGreeting/PersonalGreeting";
 import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
+import SectionTitle from "./components/SectionTitle/SectionTitle";
 
 function App() {
   return (
@@ -25,24 +26,62 @@ function App() {
       <main className="app-main">
         <div className="container">
           <section className="section">
-            <h2 className="section-title">Базовые компоненты</h2>
+            <SectionTitle
+              title={"Lesson 01  - TypeScript"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/tree/main/lessons/lesson_01"
+              urlAnchor="Lecture work"
+            />
+            <div className="components-grid">
+              <ol>
+                <li>TypeScript</li>
+                <li>Setting up TS</li>
+                <li>Scripts</li>
+                <li>TSC & TSX</li>
+                <li>Union Type</li>
+                <li>Interface</li>
+                <li>Functions</li>
+                <li>Tuple</li>
+              </ol>
+            </div>
+          </section>
+
+          <section className="section">
+            <SectionTitle
+              title={"Homework 02"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_01/tasks.md"
+              urlAnchor="Tasks"
+            />
+            <div className="components-grid">
+              <a
+                href="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_01/index.ts"
+                target="_blank"
+              >
+                task solution
+              </a>
+            </div>
+          </section>
+
+          <section className="section">
+            <SectionTitle
+              title={"Lesson 02 - React + Vite (Props)"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/lessons/lesson_02/react.pdf"
+              urlAnchor="Presentation"
+            />
             <div className="components-grid">
               <Greeting />
-            </div>
-          </section>
-
-          <section className="section">
-            <h2 className="section-title">Компоненты с пропсами</h2>
-            <div className="components-grid">
               <Goodbye name={"Bob"} />
               <Goodbye name={"Jon"} />
-              <AgeInfo age={25} name={"Вася"} />
-              <AgeInfo age={52} name={"Adolf"} />
+              <AgeInfo age={23} name={"Andrey"} />
+              <AgeInfo age={26} name={"Fred"} />
             </div>
           </section>
 
           <section className="section">
-            <h2 className="section-title">Карточки</h2>
+            <SectionTitle
+              title={"Homework 02"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_02/tasks.md"
+              urlAnchor="Tasks"
+            />
             <div className="components-grid">
               <DogCard name={"Tyson"} />
               <ProfileCard
@@ -52,18 +91,40 @@ function App() {
                   "Марина Леонидовна Кравец — российская теле- и радиоведущая, певица, актриса кино, телевидения и дубляжа. С 2009 года — резидент «Comedy Club». Биография. Родилась 18 мая 1984 года в Ленинграде. Марина — младший ребёнок в семье, у неё два старших брат..."
                 }
               />
+              <ProfileCard
+                avatar={
+                  "https://avatars.mds.yandex.net/get-entity_search/7798118/970288456/S600xU_2x"
+                }
+                name={"Albert Einstein"}
+                description={
+                  'Einstein received numerous awards and honors, and in 1922, he was awarded the 1921 Nobel Prize in Physics "for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect". None of the nominations in 1921 met the criteria set by Alfred Nobel, so the 1921 prize was carried forward and awarded to Einstein in 1922. ...'
+                }
+              />
             </div>
           </section>
 
           <section className="section">
-            <h2 className="section-title">Компоненты с useState</h2>
+            <SectionTitle
+              title={"Lesson 03 - useState, css modules, controlled input"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/lessons/lesson_03/use-state.pdf"
+              urlAnchor="Presentation"
+            />
             <div className="components-grid">
               <PersonalGreeting />
               <Counter />
+            </div>
+          </section>
+
+          <section className="section">
+            <SectionTitle
+              title={"Homework 03"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_03/tasks.md"
+              urlAnchor="Task"
+            />
+            <div className="components-grid">
               <SpaceMissionForm />
             </div>
           </section>
-          
         </div>
       </main>
 
