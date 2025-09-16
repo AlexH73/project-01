@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTheme } from "../../hooks/useTheme";
 import styles from "./Nationality.module.css";
 
 type Country = {
@@ -8,6 +9,7 @@ type Country = {
 
 export default function Nationality() {
   const BASE_URL = "https://api.nationalize.io/?name=";
+  const { theme } = useTheme();
 
   const [countries, setCountries] = useState<Country[]>([]);
   const [name, setName] = useState("jack");
@@ -54,7 +56,11 @@ export default function Nationality() {
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${
+        theme === "dark" ? styles.darkTheme : ""
+      }`}
+    >
       <div className={styles.card}>
         <h2 className={styles.title}>🌍 Nationality Predictor</h2>
         <p className={styles.subtitle}>
@@ -147,7 +153,6 @@ function getCountryName(countryCode: string) {
     BR: "Brazil",
     AU: "Australia",
     CA: "Canada",
-    // Добавьте другие страны по необходимости
   };
 
   return countryNames[countryCode] || countryCode;

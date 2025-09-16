@@ -3,8 +3,12 @@
   max-width: 600px;
   margin: 2rem auto;
   padding: var(--space-6);
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.container.darkTheme {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
 }
 
 .card {
@@ -49,6 +53,8 @@
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   font-size: var(--text-base);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   transition: all 0.2s ease;
 }
 
@@ -128,6 +134,7 @@
   background-color: var(--bg-secondary);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
   transition: transform 0.2s ease;
 }
 

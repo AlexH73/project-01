@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useTheme } from "../../hooks/useTheme";
 import styles from "./Demo.module.css";
 
 export default function Demo() {
+  const { theme } = useTheme();
   const [age, setAge] = useState(0);
   const [weight, setWeight] = useState(0);
   const [effect1Log, setEffect1Log] = useState<string[]>([]);
@@ -37,7 +39,11 @@ export default function Demo() {
 
   return (
     <>
-      <div className={styles.container}>
+      <div
+        className={`${styles.container} ${
+          theme === "dark" ? styles.darkTheme : ""
+        }`}
+      >
         <div className={styles.card}>
           <h2 className={styles.title}>🔄 Демонстрация useEffect</h2>
           <p className={styles.subtitle}>
@@ -88,18 +94,22 @@ export default function Demo() {
           </div>
         </div>
       </div>
-      
-      <div className={styles.container}>
+
+      <div
+        className={`${styles.container} ${
+          theme === "dark" ? styles.darkTheme : ""
+        }`}
+      >
         <div className={styles.card}>
+          <h2 className={styles.logTitle}>
+            Effect 1:{" "}
+            <span className={styles.effectType}>Без зависимостей</span>
+          </h2>
+          <p className={styles.logDescription}>
+            Выполняется при каждом рендере компонента
+          </p>
           <div className={styles.logs}>
             <div className={styles.logSection}>
-              <h2 className={styles.logTitle}>
-                Effect 1:{" "}
-                <span className={styles.effectType}>Без зависимостей</span>
-              </h2>
-              <p className={styles.logDescription}>
-                Выполняется при каждом рендере компонента
-              </p>
               <div className={styles.logList}>
                 {effect1Log.map((log, index) => (
                   <div key={index} className={styles.logItem}>
@@ -111,15 +121,19 @@ export default function Demo() {
           </div>
         </div>
       </div>
-      <div className={styles.container}>
+      <div
+        className={`${styles.container} ${
+          theme === "dark" ? styles.darkTheme : ""
+        }`}
+      >
         <div className={styles.card}>
+          <h2 className={styles.logTitle}>
+            Effect 2: <span className={styles.effectType}>Пустой массив</span>
+          </h2>
+          <p className={styles.logDescription}>
+            Выполняется только при первом рендере (mount)
+          </p>
           <div className={styles.logSection}>
-            <h2 className={styles.logTitle}>
-              Effect 2: <span className={styles.effectType}>Пустой массив</span>
-            </h2>
-            <p className={styles.logDescription}>
-              Выполняется только при первом рендере (mount)
-            </p>
             <div className={styles.logList}>
               {effect2Log.map((log, index) => (
                 <div key={index} className={styles.logItem}>
@@ -128,14 +142,14 @@ export default function Demo() {
               ))}
             </div>
           </div>
+          <h3 className={styles.logTitle}>
+            Effect 3:{" "}
+            <span className={styles.effectType}>Зависит от [age]</span>
+          </h3>
+          <p className={styles.logDescription}>
+            Выполняется при первом рендере и при изменении age
+          </p>
           <div className={styles.logSection}>
-            <h3 className={styles.logTitle}>
-              Effect 3:{" "}
-              <span className={styles.effectType}>Зависит от [age]</span>
-            </h3>
-            <p className={styles.logDescription}>
-              Выполняется при первом рендере и при изменении age
-            </p>
             <div className={styles.logList}>
               {effect3Log.map((log, index) => (
                 <div key={index} className={styles.logItem}>
