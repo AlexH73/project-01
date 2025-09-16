@@ -10,6 +10,8 @@ import Counter from "./components/Counter/Counter";
 import PersonalGreeting from "./components/PersonalGreeting/PersonalGreeting";
 import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 import SectionTitle from "./components/SectionTitle/SectionTitle";
+import Demo from "./components/Demo/Demo";
+import Nationality from "./components/Nationality/Nationality";
 
 function App() {
   return (
@@ -47,7 +49,7 @@ function App() {
 
           <section className="section">
             <SectionTitle
-              title={"Homework 02"}
+              title={"Homework 01"}
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_01/tasks.md"
               urlAnchor="Tasks"
             />
@@ -123,6 +125,18 @@ function App() {
             />
             <div className="components-grid">
               <SpaceMissionForm />
+            </div>
+          </section>
+
+          <section className="section">
+            <SectionTitle
+              title={"Lesson 04 - useEffect"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/lessons/lesson_04/theory.md"
+              urlAnchor="Theory"
+            />
+            <div className="components-grid">
+              <Demo />
+              <Nationality />
             </div>
           </section>
         </div>
