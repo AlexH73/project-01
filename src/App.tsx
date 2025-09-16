@@ -12,6 +12,7 @@ import SpaceMissionForm from "./components/SpaceMissionForm/SpaceMissionForm";
 import SectionTitle from "./components/SectionTitle/SectionTitle";
 import Demo from "./components/Demo/Demo";
 import Nationality from "./components/Nationality/Nationality";
+import GenderPredictor from "./components/GenderPredictor/GenderPredictor";
 
 function App() {
   return (
@@ -137,6 +138,17 @@ function App() {
             <div className="components-grid">
               <Demo />
               <Nationality />
+            </div>
+          </section>
+
+          <section className="section">
+            <SectionTitle
+              title={"Homework 04"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_04/tasks.md"
+              urlAnchor="Task"
+            />
+            <div className="components-grid">
+              <GenderPredictor />
             </div>
           </section>
         </div>
