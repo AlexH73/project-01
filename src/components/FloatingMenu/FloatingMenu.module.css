@@ -25,7 +25,7 @@
 }
 
 .menuButton.dark {
-  background-color: var(--primary-hover);
+  background-color: var(--bg-tertiary);
 }
 
 .menuButton:hover {
