@@ -1,0 +1,11 @@
+.button {
+  composes: btn from global;
+  composes: btn-primary from global;
+  align-self: center;
+  min-width: 160px;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

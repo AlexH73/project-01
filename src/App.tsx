@@ -13,6 +13,8 @@ import SectionTitle from "./components/SectionTitle/SectionTitle";
 import Demo from "./components/Demo/Demo";
 import Nationality from "./components/Nationality/Nationality";
 import GenderPredictor from "./components/GenderPredictor/GenderPredictor";
+import TypeScript from "./components/TypeScript/TypeScript";
+import Button from "./components/Button/Button";
 
 function App() {
   return (
@@ -35,16 +37,7 @@ function App() {
               urlAnchor="Lecture work"
             />
             <div className="components-grid">
-              <ol>
-                <li>TypeScript</li>
-                <li>Setting up TS</li>
-                <li>Scripts</li>
-                <li>TSC & TSX</li>
-                <li>Union Type</li>
-                <li>Interface</li>
-                <li>Functions</li>
-                <li>Tuple</li>
-              </ol>
+              <TypeScript />
             </div>
           </section>
 
@@ -55,12 +48,10 @@ function App() {
               urlAnchor="Tasks"
             />
             <div className="components-grid">
-              <a
-                href="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_01/index.ts"
-                target="_blank"
-              >
-                task solution
-              </a>
+              <Button
+                buttonUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_01/index.ts"
+                urlAnchor=">> Task solution <<"
+              />
             </div>
           </section>
 
