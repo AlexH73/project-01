@@ -15,6 +15,7 @@ import Nationality from "./components/Nationality/Nationality";
 import GenderPredictor from "./components/GenderPredictor/GenderPredictor";
 import TypeScript from "./components/TypeScript/TypeScript";
 import Button from "./components/Button/Button";
+import FloatingMenu from "./components/FloatingMenu/FloatingMenu";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
 
       <main className="app-main">
         <div className="container">
-          <section className="section">
+          <section id="lesson-01" className="section">
             <SectionTitle
               title={"Lesson 01  - TypeScript"}
               codeUrl="https://github.com/AlexH73/frontend-pro/tree/main/lessons/lesson_01"
@@ -41,7 +42,7 @@ function App() {
             </div>
           </section>
 
-          <section className="section">
+          <section id="homework-01" className="section">
             <SectionTitle
               title={"Homework 01"}
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_01/tasks.md"
@@ -55,7 +56,7 @@ function App() {
             </div>
           </section>
 
-          <section className="section">
+          <section id="lesson-02" className="section">
             <SectionTitle
               title={"Lesson 02 - React + Vite (Props)"}
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/lessons/lesson_02/react.pdf"
@@ -70,7 +71,7 @@ function App() {
             </div>
           </section>
 
-          <section className="section">
+          <section id="homework-02" className="section">
             <SectionTitle
               title={"Homework 02"}
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_02/tasks.md"
@@ -97,7 +98,7 @@ function App() {
             </div>
           </section>
 
-          <section className="section">
+          <section id="lesson-03" className="section">
             <SectionTitle
               title={"Lesson 03 - useState, css modules, controlled input"}
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/lessons/lesson_03/use-state.pdf"
@@ -109,7 +110,7 @@ function App() {
             </div>
           </section>
 
-          <section className="section">
+          <section id="homework-03" className="section">
             <SectionTitle
               title={"Homework 03"}
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_03/tasks.md"
@@ -120,7 +121,7 @@ function App() {
             </div>
           </section>
 
-          <section className="section">
+          <section id="lesson-04" className="section">
             <SectionTitle
               title={"Lesson 04 - useEffect"}
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/lessons/lesson_04/theory.md"
@@ -132,7 +133,7 @@ function App() {
             </div>
           </section>
 
-          <section className="section">
+          <section id="homework-04" className="section">
             <SectionTitle
               title={"Homework 04"}
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_04/tasks.md"
@@ -173,6 +174,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <FloatingMenu />
     </div>
   );
 }
