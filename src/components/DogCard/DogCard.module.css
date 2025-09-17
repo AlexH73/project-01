@@ -1,6 +1,7 @@
 .card {
   composes: card from global;
   text-align: center;
+  max-height: 155px;
   padding: var(--space-5);
   background: linear-gradient(135deg, #e0f7fabf 0%, #b3e5fc7d 100%);
   border: 2px solid #81d4fa;
