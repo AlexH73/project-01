@@ -16,6 +16,7 @@ import GenderPredictor from "./components/GenderPredictor/GenderPredictor";
 import TypeScript from "./components/TypeScript/TypeScript";
 import Button from "./components/Button/Button";
 import FloatingMenu from "./components/FloatingMenu/FloatingMenu";
+import UsersList from "./components/UsersList/UsersList";
 
 function App() {
   return (
@@ -141,6 +142,17 @@ function App() {
             />
             <div className="components-grid">
               <GenderPredictor />
+            </div>
+          </section>
+
+          <section id="homework-05" className="section">
+            <SectionTitle
+              title={"Homework 05"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/homeworks/hw_05/tasks.md"
+              urlAnchor="Task"
+            />
+            <div className="components-grid-1">
+              <UsersList />
             </div>
           </section>
         </div>
