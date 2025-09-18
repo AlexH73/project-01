@@ -145,6 +145,15 @@ function App() {
             </div>
           </section>
 
+          <section id="lesson-05" className="section">
+            <SectionTitle
+              title={"Lesson 05 - Task-List-App"}
+              codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/lessons/lesson_05/theory.md"
+              urlAnchor="Theory"
+            />
+            <div className="components-grid">Loading...</div>
+          </section>
+
           <section id="homework-05" className="section">
             <SectionTitle
               title={"Homework 05"}
