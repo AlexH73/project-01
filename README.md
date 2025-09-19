@@ -4,6 +4,8 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-✓-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-✓-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel&logoColor=white)](https://vercel.com)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-%237952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![ESLint](https://img.shields.io/badge/ESLint-✓-4B32C3?logo=eslint&logoColor=white)](https://eslint.org/)
 
 Практический проект для отработки навыков работы с React, TypeScript и Vite. Этот репозиторий является практическим дополнением к теоретическому курсу по [фронтенд-разработке](https://github.com/AlexH73/frontend-pro).
 
