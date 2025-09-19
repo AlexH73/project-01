@@ -38,18 +38,15 @@ export default function Demo() {
   };
 
   return (
-    <>
-      <div
-        className={`${styles.container} ${
-          theme === "dark" ? styles.darkTheme : ""
-        }`}
-      >
-        <div className={styles.card}>
-          <h2 className={styles.title}>🔄 Демонстрация useEffect</h2>
-          <p className={styles.subtitle}>
-            Изучение жизненного цикла компонента
-          </p>
-
+    <div
+      className={`${styles.container} ${
+        theme === "dark" ? styles.darkTheme : ""
+      }`}
+    >
+      <div className={styles.card}>
+        <h2 className={styles.title}>🔄 Демонстрация useEffect</h2>
+        <p className={styles.subtitle}>Изучение жизненного цикла компонента</p>
+        <div className={styles.gridContainer}>
           <div className={styles.demoArea}>
             <div className={styles.stats}>
               <div className={styles.stat}>
@@ -64,19 +61,19 @@ export default function Demo() {
 
             <div className={styles.buttons}>
               <button
-                className={styles.button}
+                className={`${styles.button} ${styles.buttonPrimary}`}
                 onClick={() => setAge((prev) => prev + 1)}
               >
                 +1 Age
               </button>
               <button
-                className={styles.button}
+                className={`${styles.button} ${styles.buttonPrimary}`}
                 onClick={() => setWeight((prev) => prev + 1)}
               >
                 +1 Weight
               </button>
               <button
-                className={`${styles.button} ${styles.secondary}`}
+                className={`${styles.button} ${styles.buttonSecondary}`}
                 onClick={resetLogs}
               >
                 Очистить логи
@@ -93,47 +90,31 @@ export default function Demo() {
             </ul>
           </div>
         </div>
-      </div>
-
-      <div
-        className={`${styles.container} ${
-          theme === "dark" ? styles.darkTheme : ""
-        }`}
-      >
-        <div className={styles.card}>
-          <h2 className={styles.logTitle}>
-            Effect 1:{" "}
-            <span className={styles.effectType}>Без зависимостей</span>
-          </h2>
-          <p className={styles.logDescription}>
-            Выполняется при каждом рендере компонента
-          </p>
-          <div className={styles.logs}>
-            <div className={styles.logSection}>
-              <div className={styles.logList}>
-                {effect1Log.map((log, index) => (
-                  <div key={index} className={styles.logItem}>
-                    {log}
-                  </div>
-                ))}
-              </div>
+        <div className={styles.logs}>
+          <div className={styles.logSection}>
+            <h4 className={styles.logTitle}>
+              Effect 1:{" "}
+              <span className={styles.effectType}>Без зависимостей</span>
+            </h4>
+            <p className={styles.logDescription}>
+              Выполняется при каждом рендере компонента
+            </p>
+            <div className={styles.logList}>
+              {effect1Log.map((log, index) => (
+                <div key={index} className={styles.logItem}>
+                  {log}
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        className={`${styles.container} ${
-          theme === "dark" ? styles.darkTheme : ""
-        }`}
-      >
-        <div className={styles.card}>
-          <h2 className={styles.logTitle}>
-            Effect 2: <span className={styles.effectType}>Пустой массив</span>
-          </h2>
-          <p className={styles.logDescription}>
-            Выполняется только при первом рендере (mount)
-          </p>
+
           <div className={styles.logSection}>
+            <h4 className={styles.logTitle}>
+              Effect 2: <span className={styles.effectType}>Пустой массив</span>
+            </h4>
+            <p className={styles.logDescription}>
+              Выполняется только при первом рендере (mount)
+            </p>
             <div className={styles.logList}>
               {effect2Log.map((log, index) => (
                 <div key={index} className={styles.logItem}>
@@ -142,14 +123,15 @@ export default function Demo() {
               ))}
             </div>
           </div>
-          <h3 className={styles.logTitle}>
-            Effect 3:{" "}
-            <span className={styles.effectType}>Зависит от [age]</span>
-          </h3>
-          <p className={styles.logDescription}>
-            Выполняется при первом рендере и при изменении age
-          </p>
+
           <div className={styles.logSection}>
+            <h4 className={styles.logTitle}>
+              Effect 3:{" "}
+              <span className={styles.effectType}>Зависит от [age]</span>
+            </h4>
+            <p className={styles.logDescription}>
+              Выполняется при первом рендере и при изменении age
+            </p>
             <div className={styles.logList}>
               {effect3Log.map((log, index) => (
                 <div key={index} className={styles.logItem}>
@@ -160,6 +142,6 @@ export default function Demo() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

@@ -128,7 +128,7 @@ function App() {
               codeUrl="https://github.com/AlexH73/frontend-pro/blob/main/lessons/lesson_04/theory.md"
               urlAnchor="Theory"
             />
-            <div className="components-grid">
+            <div className="components-grid-1">
               <Demo />
               <Nationality />
             </div>
