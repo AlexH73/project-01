@@ -5,6 +5,8 @@
   background: linear-gradient(135deg, var(--light-blue-1) 0%, var(--light-blue-2) 100%);
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  min-width: 280px;
+  width: 100%;
 }
 
 .container.darkTheme {
@@ -144,6 +146,11 @@
 .logs {
   display: flex;
   gap: var(--space-4);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg-tertiary);
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .logSection {
@@ -153,6 +160,7 @@
   box-shadow: var(--shadow);
   border-left: 4px solid var(--primary);
   max-width: 600px;
+  min-width: 224px;
 }
 
 .logSection:nth-child(2) {
