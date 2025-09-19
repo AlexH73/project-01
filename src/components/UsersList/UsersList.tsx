@@ -108,7 +108,17 @@ export default function UsersList() {
     >
       <div className={styles.card}>
         <h2 className={styles.title}>👥 Users Gallery</h2>
-        <p className={styles.subtitle}>Data from JSONPlaceholder API</p>
+        <p className={styles.subtitle}>
+          Data from{" "}
+          <a
+            href="https://jsonplaceholder.typicode.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-opacity-10-hover link-underline-info"
+          >
+            JSONPlaceholder API
+          </a>
+        </p>
 
         <div className={styles.scrollContainer}>
           <div className={styles.usersRow}>

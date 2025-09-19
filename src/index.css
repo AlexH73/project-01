@@ -6,17 +6,20 @@
   --success: #22c55e;
   --error: #ef4444;
   --warning: #f59e0b;
-  
+
   --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
   --bg-tertiary: #e2e8f0;
-  
+
   --text-primary: #1e293b;
   --text-secondary: #64748b;
   --text-inverted: #ffffff;
-  
+
   --border-color: #e2e8f0;
   --shadow-color: rgba(0, 0, 0, 0.1);
+
+  --light-blue-1: #f0f9ff;
+  --light-blue-2: #e0f2fe;
 }
 
 :root[data-theme="dark"] {
@@ -27,17 +30,20 @@
   --success: #4ade80;
   --error: #f87171;
   --warning: #fbbf24;
-  
+
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
-  
+
   --text-primary: #f1f5f9;
   --text-secondary: #cbd5e1;
   --text-inverted: #1e293b;
-  
+
   --border-color: #334155;
   --shadow-color: rgba(0, 0, 0, 0.3);
+
+  --light-blue-1: #1e293b;
+  --light-blue-2: #0f172a;
 }
 
 :root {
@@ -48,32 +54,33 @@
   --success: #22c55e;
   --error: #ef4444;
   --warning: #f59e0b;
-  
+
   /* Фон */
   --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
   --bg-tertiary: #e2e8f0;
-  
+
   /* Текст */
   --text-primary: #1e293b;
   --text-secondary: #64748b;
   --text-inverted: #ffffff;
-  
+
   /* Другое */
   --border-radius: 8px;
   --border-radius-lg: 12px;
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  
+
   /* Типографика */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", sans-serif;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
   --text-xl: 1.25rem;
   --text-2xl: 1.5rem;
   --text-3xl: 1.875rem;
-  
+
   /* Пространство */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -123,16 +130,29 @@ body {
 }
 
 /* Типографика */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: var(--space-4);
   font-weight: 600;
   line-height: 1.25;
 }
 
-h1 { font-size: var(--text-3xl); }
-h2 { font-size: var(--text-2xl); }
-h3 { font-size: var(--text-xl); }
-h4 { font-size: var(--text-lg); }
+h1 {
+  font-size: var(--text-3xl);
+}
+h2 {
+  font-size: var(--text-2xl);
+}
+h3 {
+  font-size: var(--text-xl);
+}
+h4 {
+  font-size: var(--text-lg);
+}
 
 p {
   margin-bottom: var(--space-4);
@@ -150,7 +170,8 @@ a:hover {
 }
 
 /* Списки */
-ul, ol {
+ul,
+ol {
   margin-left: var(--space-12);
 }
 
@@ -194,7 +215,9 @@ button {
 }
 
 /* Формы */
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
   padding: var(--space-3);
@@ -203,24 +226,44 @@ input, textarea, select {
   transition: border-color 0.2s ease;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgb(37 99 235 / 0.1);
 }
 
 /* Утилитарные классы */
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
 
-.mt-2 { margin-top: var(--space-2); }
-.mt-4 { margin-top: var(--space-4); }
-.mb-2 { margin-bottom: var(--space-2); }
-.mb-4 { margin-bottom: var(--space-4); }
+.mt-2 {
+  margin-top: var(--space-2);
+}
+.mt-4 {
+  margin-top: var(--space-4);
+}
+.mb-2 {
+  margin-bottom: var(--space-2);
+}
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
 
-.p-4 { padding: var(--space-4); }
-.p-6 { padding: var(--space-6); }
+.p-4 {
+  padding: var(--space-4);
+}
+.p-6 {
+  padding: var(--space-6);
+}
 
 .flex {
   display: flex;
@@ -255,8 +298,12 @@ input:focus, textarea:focus, select:focus {
 
 /* Анимации */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .fade-in {
@@ -264,11 +311,11 @@ input:focus, textarea:focus, select:focus {
 }
 
 @keyframes slideUp {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(10px);
   }
-  to { 
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -284,11 +331,11 @@ input:focus, textarea:focus, select:focus {
     --text-3xl: 1.5rem;
     --text-2xl: 1.25rem;
   }
-  
+
   .container {
     padding: 0 var(--space-3);
   }
-  
+
   .flex {
     flex-direction: column;
   }

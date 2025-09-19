@@ -13,7 +13,7 @@ export default function Demo() {
   // Вариант 1 - без массива зависимостей
   useEffect(() => {
     const log = `Effect 1: Выполнен (без зависимостей)`;
-    setEffect1Log((prev) => [...prev.slice(-10), log]);
+    setEffect1Log((prev) => [...prev.slice(-4), log]);
     console.log("Variant 1 - no array");
   });
 
@@ -102,7 +102,7 @@ export default function Demo() {
             <div className={styles.logList}>
               {effect1Log.map((log, index) => (
                 <div key={index} className={styles.logItem}>
-                  {log}
+                  {index + 1 + ". " + log}
                 </div>
               ))}
             </div>
@@ -118,7 +118,7 @@ export default function Demo() {
             <div className={styles.logList}>
               {effect2Log.map((log, index) => (
                 <div key={index} className={styles.logItem}>
-                  {log}
+                  {index + 1 + ". " + log}
                 </div>
               ))}
             </div>
@@ -135,7 +135,7 @@ export default function Demo() {
             <div className={styles.logList}>
               {effect3Log.map((log, index) => (
                 <div key={index} className={styles.logItem}>
-                  {log}
+                  {index + 1 + ". " + log}
                 </div>
               ))}
             </div>
