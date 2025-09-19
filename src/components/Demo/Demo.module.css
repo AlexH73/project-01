@@ -224,15 +224,12 @@
   }
 }
 
-@media (max-width: 1024px) {
+/* Адаптивность */
+@media (max-width: 768px) {
   .gridContainer {
     grid-template-columns: 1fr;
     gap: var(--space-3);
   }
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
   .stats {
     flex-direction: column;
     gap: var(--space-3);
